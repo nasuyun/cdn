@@ -773,7 +773,7 @@ const renderStyle = (comp) => {
 const renderByConfig = () => {
     const rootLayout = document.getElementById("root");
     const apikey = rootLayout.getAttribute('apikey');
-    if (compid != "undefined") {
+    if (apikey != "undefined") {
         fetch(endpoint + '/api/component', { headers: { apikey } })
             .then(res => res.json())
             .then(comp => {
